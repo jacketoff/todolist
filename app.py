@@ -6,9 +6,10 @@ list = []
 @app.route('/')
 @app.route('/index', methods=['GET', 'POST'])
 def index():
-    
     if request.method == 'POST':
         task = request.form['task']
         list.append(task)
-    print(list)
+    
     return render_template('index.html',list=list)
+#test
+#test
