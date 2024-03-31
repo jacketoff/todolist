@@ -14,9 +14,17 @@
 </form>
 <p style="height: 10px;"></p>
 <div>
+<ul>
 {%for item in list%}
-<li>{{item}}</li>
+<li>{{item}}
+    <form action="/index" method="POST">
+        <input type="hidden" name="delete" value="{{item}}">
+        <button type="submit">Delete</button>
+    </form>
+</li>
+
 {%endfor%}
+</ul>
 </div>
 
 </html>
